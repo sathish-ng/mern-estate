@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { FaPhoneAlt, FaUser, FaEnvelope } from "react-icons/fa";
+
 
 
 export default function Contact({listing}) {

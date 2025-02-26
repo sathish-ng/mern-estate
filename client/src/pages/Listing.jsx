@@ -12,6 +12,8 @@ import {
   FaMapMarkerAlt,
   FaParking,
   FaShare,
+  FaPhoneAlt,
+  FaRulerCombined
 } from 'react-icons/fa';
 import Contact from '../components/Contact';
 
@@ -133,6 +135,14 @@ export default function Listing() {
               <li className='flex items-center gap-1 whitespace-nowrap '>
                 <FaChair className='text-lg' />
                 {listing.furnished ? 'Furnished' : 'Unfurnished'}
+              </li>
+              <li className='flex items-center gap-1 whitespace-nowrap '>
+                <FaPhoneAlt className='text-lg' />
+                {listing.phoneNumber}
+              </li>
+              <li className='flex items-center gap-1 whitespace-nowrap '>
+                <FaRulerCombined className='text-lg' />
+                {listing.squareFeet} sq. ft.
               </li>
             </ul>
             {currentUser && listing.userRef !== currentUser._id && !contact && (

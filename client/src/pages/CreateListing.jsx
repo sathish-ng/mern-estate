@@ -18,6 +18,8 @@ export default function CreateListing() {
         name: '',
         description:'',
         address:'',
+        squareFeet: '',
+        phoneNumber: '',
         type:'rent',
         bedrooms: 1,
         bathrooms: 1,
@@ -160,6 +162,32 @@ export default function CreateListing() {
 
             <input type='text' placeholder='Address' className='border p-3 
             rounded-lg' id='address' required onChange={handleChange} value={formData.address} />
+
+            <div className='flex gap-6 w-full'>
+                <input 
+                type='text' 
+                placeholder='Phone Number' 
+                className='border p-3 rounded-lg flex-1' 
+                id='phoneNumber' 
+                required 
+                pattern="\d{10}" 
+                title="Phone number must be exactly 10 digits" 
+                maxLength="10" 
+                onChange={handleChange} 
+                value={formData.phoneNumber} 
+                />
+                <input 
+                type='number' 
+                placeholder='Square Feet' 
+                className='border p-3 rounded-lg flex-1' 
+                id='squareFeet' 
+                required 
+                min="100" 
+                max="10000" 
+                onChange={handleChange} 
+                value={formData.squareFeet} 
+                />
+            </div>
             
             <div className='flex gap-6 flex-wrap'>
                 <div className='flex gap-2'>
